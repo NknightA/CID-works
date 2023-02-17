@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import {useRouter} from "next/router";
+import styles from "../styles/home.module.sass";
+
 
 function LoginPage() {
     const [username, setUsername] = useState("");
@@ -10,17 +12,20 @@ function LoginPage() {
         // ユーザー名とパスワードを検証する処理をここに追加する
         // 例えば、ユーザー名が "example" で、パスワードが "password" の場合にログインが成功したとする
 
-        if (username === "11111" && password === "11111") {
+        if (username === "111111" && password === "111111") {
             // ログインが成功した場合は、ユーザーページに遷移する
             router.push("/user/[user]/", `/user/${username}/`);
+        } else {
+            router.push("/error");
+
         }
     };
 
     return (
-        <div>
-            <h1>CID debug</h1>
+        <div className={styles.Main}>
             <div>
                 <input
+                    className={styles.Input}
                     type="text"
                     placeholder="username"
                     value={username}
@@ -29,13 +34,16 @@ function LoginPage() {
                 /></div>
             <div>
                 <input
+                    className={styles.Input}
                     type="password"
                     placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <br/>
-                <button onClick={handleLogin}>ログイン</button>
+                <div className={styles.buttoncontainer}>
+                    <button onClick={handleLogin} className={styles.button}>ログイン</button>
+                </div>
             </div>
         </div>
     );
@@ -43,10 +51,14 @@ function LoginPage() {
 
 export default function Home() {
     return (
-        <div >
-            <div >
+        <div className={styles.Container}>
+            <div className={styles.header}>
+                <h1>CID 総当たり攻撃テスト</h1>
+            </div>
+            <div className={styles.ContainerInner}>
                 <LoginPage/>
             </div>
+            
         </div>
     );
 }
