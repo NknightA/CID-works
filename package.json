@@ -2,7 +2,7 @@
   "name": "v1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "npx http-server -p 12000"
   },
@@ -10,6 +10,7 @@
   "author": "nknight_amamiya <n.knight.pc0627@gmail.com> (https://npm.pkg.github.com/nknight_amamiya)",
   "license": "ISC",
   "dependencies": {
+    "electron": "^23.1.0",
     "http-server": "^14.1.1",
     "next": "^13.1.6",
     "react": "^18.2.0",

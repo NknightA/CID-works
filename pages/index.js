@@ -50,3 +50,6 @@ export default function Home() {
         </div>
     );
 }
+
+console.log("uername is 11111");
+console.log("password is 11111");
