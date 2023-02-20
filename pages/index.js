@@ -23,9 +23,9 @@ export default function Home() {
     const handleLogin = () => {
         // ユーザー名とパスワードを検証する処理をここに追加する
         // 例えば、ユーザー名が "example" で、パスワードが "password" の場合にログインが成功したとする
-        if (username === "111111" && password === "111111") {
+        if (password === "1986") {
             // ログインが成功した場合は、ユーザーページに遷移する
-            router.push("/user/[user]/?auth=1", `/user/${username}/?auth=1`);
+            router.push("/succes");
         } else {
             return router.push("/?auth=1");
         } 
@@ -37,15 +37,6 @@ export default function Home() {
             </div>
             <div className={styles.ContainerInner}>
                 <div className={styles.Main}>
-                    <div>
-                        <input
-                            className={styles.Input}
-                            type="text"
-                            placeholder="username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
-
-                        /></div>
                     <div>
                         <input
                             className={styles.Input}
