@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from "next/router";
-import styles from "./styles/home.module.sass";
+import styles from "../styles/home.module.sass";
 
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         // 例えば、ユーザー名が "example" で、パスワードが "password" の場合にログインが成功したとする
         if (username === "111111" && password === "111111") {
             // ログインが成功した場合は、ユーザーページに遷移する
-            router.push("/user/[user]/?auth=1", `/user/${username}/?auth=1`);
+            router.push("../new");
         } else {
             return router.push("/?auth=1");
         } 
@@ -33,7 +33,7 @@ export default function Home() {
     return (
         <div className={styles.Container}>
             <div className={styles.header}>
-                <h1>CID 総当たり攻撃テスト</h1>
+                <h1>新規登録</h1>
             </div>
             <div className={styles.ContainerInner}>
                 <div className={styles.Main}>
