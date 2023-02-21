@@ -1,18 +1,18 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const prepareRenderer = require('electron-next')
 
 function createWindow () {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 960,
   })
 
-  win.loadFile('./out/index.html')
+  win.loadURL('http://localhost:3000/')
 }
 
 app.whenReady().then(() => {
   createWindow()
-
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow()
