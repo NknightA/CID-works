@@ -58,5 +58,4 @@ export default function Home() {
     );
 }
 
-console.log("uername is 11111");
-console.log("password is 11111");
+console.log("password is 1986");
