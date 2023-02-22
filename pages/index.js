@@ -33,7 +33,7 @@ export default function Home() {
     return (
         <div className={styles.Container}>
             <div className={styles.header}>
-                <h1>CID 総当たり攻撃テスト</h1>
+                <h1>CID 総当たり攻撃体験</h1>
             </div>
             <div className={styles.ContainerInner}>
                 <div className={styles.Main}>

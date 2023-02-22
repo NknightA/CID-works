@@ -59,7 +59,6 @@ export default function Home() {
                             <button onClick={handleLogin} className={styles.button}>ログイン</button>
                         </div>
                         <AuthEnter/>
-                        <a href='/touroku'>新規登録</a>
                     </div>
                 </div>
             </div>
